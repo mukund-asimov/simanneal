@@ -58,8 +58,6 @@ class Annealer(object):
             raise ValueError('No valid values supplied for neither \
             initial_state nor load_state')
 
-        signal.signal(signal.SIGINT, self.set_user_exit)
-
     def save_state(self, fname=None):
         """Saves state to pickle"""
         if not fname:
